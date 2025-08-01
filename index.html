@@ -12,33 +12,90 @@
     <link rel="stylesheet" href="styles/index.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"/>
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="app">
-        <main>
-            <div class="main-container">
-                <div class="back">
-                    <img src="assets/icons/arrow-left-02.svg" alt="Seta de voltar">
-                    <span>Voltar</span>
-                </div>
-                <h1>Formulário de matrícula</h1>
-                <p>
-                    Preencha os dados abaixo para matricular seu filho na escola de educação infantil Estrelas do Amanhã.
-                </p>
-            </div>
-        </main>
+      <main>
+        <div class="main-container">
+          <div class="back">
+            <img src="assets/icons/arrow-left-02.svg" alt="Seta de voltar" />
+            <span>Voltar</span>
+          </div>
+          <h1>Formulário de matrícula</h1>
+          <p>
+            Preencha os dados abaixo para matricular seu filho na escola de
+            educação infantil Estrelas do Amanhã.
+          </p>
 
-        <aside>
-            <div class="aside-container">
-                <header>
-                    <img src="assets/logo.svg" alt="Estrelas do Amanha - Logo">
-                    <h2>Porque cada momento de <span>aprendizado</span> conta</h2>
-                    <p>Inscreva seu filho em nossa escola e veja-o florescer em um ambiente acolhedor, seguro e estimulante.</p>
-                </header>
-                <img src="assets/Illustration.svg" alt="Professora com Criancas">
-            </div>
-        </aside>
+          <form method="post" enctype="multipart/form-data">
+            <fieldset class="child-info">
+              <legend>Informações da criança</legend>
+
+              <div class="input-input-wrapper">
+                <label for="fullname">Nome Completo</label>
+                <input
+                name="fullname"
+                  type="text"
+                  id="fullname"
+                  placeholder="Nome da criança"
+                />
+              </div>
+
+              <div class="inpu-wrapper">
+                <label for=" birth">Data de Nascimento</label>
+                <input 
+                name="birth"
+                type="date" 
+                id="birth" 
+                lang="pt-BR" />
+              </div>
+
+              <div class="select-wrapper">
+                <label for="gender">Sexo</label>
+
+                <select name="gender" id="gender">
+                    <option value="female">Feminino</option>
+                    <option value="male">Masculino</option>
+                    <option value="na">Prefiro não responder</option>
+                </select>
+              </div>
+
+              <div class="textarea-wrapper">
+                <label for="medical-info">Informações médicas</label>
+                <textarea name="medical-info" id="medical-info"
+                    cols="30" rows="10"
+                    placeholder="A criança possui alguma necessidade de cuidado médico? Para que a escola fique ciente.(Se sim, especifique.)"
+
+                ></textarea>
+              </div>
+
+              <div class="droparea-wrapper">
+                <input type="file" name="birth-file" id="birth-file">
+                <img src="assets/icons/cloud-upload.svg" alt="">
+                <p>Clique aqui para <br> 
+                    selecionar os arquivos</p>
+              </div>
+
+            </fieldset>
+          </form>
+        </div>
+      </main>
+
+      <aside>
+        <div class="aside-container">
+          <header>
+            <img src="assets/logo.svg" alt="Estrelas do Amanha - Logo" />
+            <h2>Porque cada momento de <span>aprendizado</span> conta</h2>
+            <p>
+              Inscreva seu filho em nossa escola e veja-o florescer em um
+              ambiente acolhedor, seguro e estimulante.
+            </p>
+          </header>
+          <img src="assets/Illustration.svg" alt="Professora com Criancas" />
+        </div>
+      </aside>
     </div>
   </body>
 </html>
