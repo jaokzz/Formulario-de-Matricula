@@ -27,8 +27,8 @@
   }
   transition: transform 0.5 ease, border-widht ease;
 
-  &:hover {
-    border-width: 2px;
+  &:hover, &:has(input:focus) {
+    outline-width: 0;
     border-color: var(--stroke-highlight);
     background-color: var(--surface-secondary);
 
